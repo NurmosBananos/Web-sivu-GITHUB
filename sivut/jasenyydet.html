@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakeus Discgolf</title>
+    <link rel="stylesheet" href="../tyylit.css">
+    <link rel="icon" href="../media/icon.png" type="image/png">
+</head>
+<body onload="alusta();">
+    <header>
+        <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="logo">
+    </header>
+    <div class="navbar">
+        <a href="../index.html">Etusivu</a>
+        <a href="../sivut/tapahtumat.html">Tapahtumat</a>
+        <a href="../sivut/seura.html">Seura</a>
+        <a href="../sivut/jasenyydet.html">Jäsenyydet</a>
+        <a href="https://www.lakeusdiscgolf.com" target="_blank">Linkki viralliselle kotisivulle</a>
+    </div>
+
+    <main>
+        <section id="home">
+            <h2>Tervetuloa Lakeus Discgolf ry:n jäseneksi</h2>
+            <p>Jäsenyydet ovat myynnissä Suomisportissa.</p>
+            <p>Liittymällä seuraan säästät lajikustannuksissa.</p>
+            <p>Prismasta saat esimerkiksi 10% alennusta</p>
+            <p>Laskurilla saat laskettua, paljonko säästät vuoden aikana hankinnoissa, jos ostat tuotteita jäsenalennuksella</p>
+
+            <form onchange="laskesaasto(document.getElementById('montako').value,
+                document.getElementById('hinta').value);">
+
+                <label for="nimi">Tuotteen nimi:</label>
+                <input type="text" id="nimi" name="Tuotteen nimi" placeholder="Syötä tuotteen nimi">
+
+                <label for="montako">Montako (kpl):</label>
+                <input type="number" id="montako" name="Montako kiekkoa" min="1" max="999" value="5">
+
+                <label for="hinta">Hinta (eur):</label>
+                <input type="number" id="hinta" name="hinta" min="1" max="999" value="21.9">
+            </form>
+
+            <button onclick="lisaaOstoskoriin()">Lisää ostoskoriin</button>
+            <button onclick="tyhjennaOstoskori()">Tyhjennä ostoskori</button>
+
+            <div id="saasto"><p>Säästöä ei ole vielä laskettu</p></div>
+
+            <h3>Ostoskori</h3>
+            <div id="ostoskori"><p>Ostoskorissa ei ole tuotteita</p></div>
+
+            <form onchange="sailytys(document.getElementById('kylla').checked);">
+                <p>Säilytetäänkö laskettu säästö?</p>
+                <label for="ei">Ei</label>
+                <input type="radio" id="ei" name="tallennus" value="Ei">
+
+                <label for="kylla">Kyllä</label>
+                <input type="radio" id="kylla" name="tallennus" value="Kyllä">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="footer-logo-img">
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/groups/581751429427821" target="_blank">
+                <img src="../media/facebook_color.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/lakeusdiscgolf" target="_blank">
+                <img src="../media/instagram_color.png" alt="Instagram Logo" class="social-icon">
+            </a>
+            <a href="https://www.youtube.com/@ahonkylafrisbeegolf3352" target="_blank">
+                <img src="../media/youtube_color.png" alt="YouTube Logo" class="social-icon">
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

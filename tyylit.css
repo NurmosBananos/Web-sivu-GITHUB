@@ -1,0 +1,228 @@
+/*Sivuston asetuksia, taustakuvat yms*/
+
+body {
+    background-image: url('media/tausta1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; /* Valkoinen teksti */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/*Header, main, footer .nacvbar taustakuvan määritys*/
+header, main, footer, .navbar {
+   
+    padding: 20px;
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+}
+
+
+/* NAVBAR säädöt alkaa */
+.navbar {
+    display: flex;
+    justify-content: center; /* Keskittää linkit vaakasuunnassa */
+    padding: 20px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff; /* Valkoinen teksti */
+    font-weight: bold; /* Tekee fontista boldatun */
+    position: relative; /* Asettaa suhteellisen sijainnin */
+    overflow: hidden;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: -100%; /* Piilottaa viivan vasemmalle */
+    background-color: #fff; /* Valkoinen viiva */
+    transition: left 0.3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    left: 0; /* Siirtää viivan paikalleen */
+}
+
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+/*NAVBAR säädöt loppuu*/
+
+
+
+
+main, header, footer {
+    padding: 20px;
+}
+
+
+
+/*Somelinkkien asetuksia sivun alaosassa*/
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+    flex-direction: column; /* Asettaa sisällön pystysuunnassa */
+}
+
+
+main {
+    padding: 1em;
+    min-height: calc(100vh - 160px); /* Varmistaa, että main-osio täyttää vähintään koko näytön korkeuden */
+}
+
+footer {
+    background-color: black;
+    color: rgba(237, 234, 234, 0.024);
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo-img {
+    width: 100px; /* Asettaa logon leveyden footerissa */
+    height: auto; /* Säilyttää kuvasuhteen */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+}
+
+.video-container iframe {
+    width: 80vw; /* 80% of the viewport width */
+    height: 45vw; /* 45% of the viewport width to maintain 16:9 aspect ratio */
+    max-width: 800px; /* Maximum width */
+    max-height: 450px; /* Maximum height */
+    margin: 0 auto;
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: flex;
+}
+
+
+/* Tämä on seura-sivulla oleva lista-ominaisuus.*/
+.left-column, .right-column ol {
+    columns: 1; /* Jakaa listan kahteen sarakkeeseen */
+    font-size: 0.9em; /* Pienentää fonttikokoa */
+}
+
+.left-column,.right-column ul {
+    list-style-type:circle; /* Poistaa listamerkit */
+    padding: 2px;;
+    margin: 2;
+}
+
+.left-column,.right-column ul li {
+    margin-bottom: 5px; /* Lisää väliä listan kohtien väliin */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Keskittää sarakkeet vaakasuunnassa */
+    gap: 0px; /* Muuta tätä arvoa saadaksesi sarakkeet lähemmäksi tai kauemmaksi toisistaan */
+    padding: 0px; /* Lisää tilaa reunoille */
+}
+
+.left-column, .right-column {
+    flex: 1; /* Määrittelee sarakkeiden suhteellisen koon */
+    padding: 20px;
+    min-width: 200px; /* Varmistaa, että sarakkeet eivät ole liian kapeita */
+    max-width: 400px; /* Rajoittaa sarakkeiden maksimileveyden */
+  
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Korjattu flex-wrap */
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+}
+
+
+/* Instagram feedin omat jutut */
+
+.instagram-feed {
+    display:flexbox;
+    justify-content:flex-end;
+    align-items: center;
+    margin: 0px 0;
+    width: 50%; /* Asettaa leveydeksi 100% */
+}
+.instagram-feed-tapahtumat {
+    display:flexbox;
+    justify-content:flex-end;
+    align-items:center;
+    margin: 0px 0;
+    width: 60%; /* Asettaa leveydeksi 100% */
+}
+
+.elfsight-app-f8759532-5bef-4587-9616-bb6d210a90ef {
+    width: 80%; /* Asettaa syötteen leveydeksi 80% */
+    max-width: 800px; /* Rajoittaa syötteen maksimileveyden */
+}
+
+
+.sk-ww-facebook-group-posts {
+    color: black!important; /* Vaihda haluamasi väri tähän */
+    display:flexbox;
+    justify-content:flex-end;
+    align-items: center;
+    margin: 0px 0;
+    width: 50%; /* Asettaa leveydeksi 100% */
+}
+
+.sk-ww-facebook-group-posts .post-content {
+    color:black !important; /* Vaihda haluamasi väri tähän */
+    display:flexbox;
+    justify-content:flex-end;
+    align-items: center;
+    margin: 0px 0;
+    width: 10%; /* Asettaa leveydeksi 100% */
+}
