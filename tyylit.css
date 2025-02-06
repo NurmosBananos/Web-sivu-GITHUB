@@ -121,7 +121,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    background-color: rgba(15, 15, 15, 0.02); /* Taustaväri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
