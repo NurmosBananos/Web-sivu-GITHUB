@@ -260,4 +260,18 @@ iframe {
     .instagram-feed, .sk-ww-facebook-group-posts {
         width: 100%; /* Leveys 100% mobiilissa */
     }
+    .flex-container {
+        flex-direction: column; /* Sarakkeet päällekkäin mobiililaitteilla */
+        align-items: center; /* Keskittää sarakkeet */
+    }
+
+    .left-column, .right-column {
+        max-width: 100%; /* Sarakkeet vievät koko tilan mobiililaitteella */
+        margin-bottom: 20px; /* Lisää tilaa sarakkeiden väliin */
+    }
+
+    .left-column ul, .right-column ul {
+        font-size: 0.8em; /* Pienentää fonttikokoa mobiilissa */
+    }
 }
+
