@@ -131,7 +131,7 @@ footer {
     max-width: 800px; /* Maximum width */
     max-height: 450px; /* Maximum height */
     margin: 0 auto;
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    background-color: rgba(15, 15, 15, 0.20); /* Taustaväri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
