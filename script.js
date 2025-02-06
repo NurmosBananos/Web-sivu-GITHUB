@@ -46,8 +46,8 @@ function paivitaOstoskori() {
         ostoskoriSisalto += `<li>${item.montako} kpl "${item.nimi}" à ${item.hinta.toFixed(2)} euroa = ${item.kokonaisHinta.toFixed(2)} euroa (säästö ${item.vuotuinenSaasto.toFixed(2)} euroa)</li>`;
     });
     ostoskoriSisalto += "</ul>";
-    ostoskoriSisalto += `<p>Hankinnat yhteensä: ${yhteishinta.toFixed(2)} euroa</p>`;
-    ostoskoriSisalto += `<p>Säästö kokonaisuudessaan: ${yhteensaasto.toFixed(2)} euroa</p>`;
+    ostoskoriSisalto += `<p>Hankinnat yhteensä: ${yhteishinta.toFixed(1)} euroa</p>`;
+    ostoskoriSisalto += `<p>Säästö kokonaisuudessaan: ${yhteensaasto.toFixed(1)} euroa</p>`;
 
     ostoskoriDiv.innerHTML = ostoskoriSisalto;
 
