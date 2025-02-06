@@ -27,35 +27,26 @@
             <p>Prismasta saat esimerkiksi 10% alennusta</p>
             <p>Laskurilla saat laskettua, paljonko säästät vuoden aikana hankinnoissa, jos ostat tuotteita jäsenalennuksella</p>
 
-            <form onchange="laskesaasto(document.getElementById('montako').value,
-                document.getElementById('hinta').value);">
+            <!-- Tuotteen lisääminen ostoskoriin -->
+            <h3>Lisää tuote ostoskoriin</h3>
+            <label for="tuoteNimi">Tuotteen nimi:</label>
+            <input type="text" id="tuoteNimi" placeholder="Tuotteen nimi" required><br>
 
-                <label for="nimi">Tuotteen nimi:</label>
-                <input type="text" id="nimi" name="Tuotteen nimi" placeholder="Syötä tuotteen nimi">
+            <label for="montako">Montako kappaletta:</label>
+            <input type="number" id="montako" min="1" required><br>
 
-                <label for="montako">Montako (kpl):</label>
-                <input type="number" id="montako" name="Montako kiekkoa" min="1" max="999" value="5">
-
-                <label for="hinta">Hinta (eur):</label>
-                <input type="number" id="hinta" name="hinta" min="1" max="999" value="21.9">
-            </form>
+            <label for="hinta">Hinta per kappale (euroa):</label>
+            <input type="number" id="hinta" min="0.01" step="0.01" required><br>
 
             <button onclick="lisaaOstoskoriin()">Lisää ostoskoriin</button>
+
+            <!-- Tyhjennysnappi -->
             <button onclick="tyhjennaOstoskori()">Tyhjennä ostoskori</button>
 
-            <div id="saasto"><p>Säästöä ei ole vielä laskettu</p></div>
-
             <h3>Ostoskori</h3>
-            <div id="ostoskori"><p>Ostoskorissa ei ole tuotteita</p></div>
-
-            <form onchange="sailytys(document.getElementById('kylla').checked);">
-                <p>Säilytetäänkö laskettu säästö?</p>
-                <label for="ei">Ei</label>
-                <input type="radio" id="ei" name="tallennus" value="Ei">
-
-                <label for="kylla">Kyllä</label>
-                <input type="radio" id="kylla" name="tallennus" value="Kyllä">
-            </form>
+            <div id="ostoskori"></div>
+            <p id="kokonaisHinta"></p>
+            <p id="saasto"></p>
         </section>
     </main>
 
@@ -75,6 +66,7 @@
             </a>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="../script.js"></script>
 </body>
 </html>
