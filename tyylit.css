@@ -200,7 +200,7 @@ iframe {
 }
 
 .sk-ww-facebook-group-posts {
-    color: black!important; /* Vaihda haluamasi väri tähän */
+    color: rgb(255, 255, 255)!important; /* Vaihda haluamasi väri tähän */
     display: flex;
     justify-content: flex-end;
     align-items: center;
