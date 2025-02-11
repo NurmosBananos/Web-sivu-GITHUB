@@ -1,5 +1,4 @@
-/*Sivuston asetuksia, taustakuvat yms*/
-
+/* Sivuston asetuksia, taustakuvat yms */
 body {
     background-image: url('media/tausta1.jpg');
     background-size: cover;
@@ -12,33 +11,31 @@ body {
 }
 
 .logo {
-    width: 600px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
+    width: 600px; /* Oletusleveys, pienenee mobiilissa */
+    height: auto; /* Säilyttää kuvasuhteen */
 }
 
-
-/*Header, main, footer .nacvbar taustakuvan määritys*/
+/* Header, main, footer ja navbar */
 header, main, footer, .navbar {
-   
     padding: 20px;
-    background-color: rgba(15, 15, 15, 0.1); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+    background-color: rgba(15, 15, 15, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* NAVBAR säädöt alkaa */
+/* NAVBAR säädöt */
 .navbar {
     display: flex;
-    justify-content: center; /* Keskittää linkit vaakasuunnassa */
+    justify-content: center;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     margin: 0 15px;
     text-decoration: none;
-    color: #fff; /* Valkoinen teksti */
-    font-weight: bold; /* Tekee fontista boldatun */
-    position: relative; /* Asettaa suhteellisen sijainnin */
+    color: #fff;
+    font-weight: bold;
+    position: relative;
     overflow: hidden;
 }
 
@@ -48,34 +45,33 @@ header, main, footer, .navbar {
     width: 100%;
     height: 2px;
     bottom: 0;
-    left: -100%; /* Piilottaa viivan vasemmalle */
-    background-color: #fff; /* Valkoinen viiva */
+    left: -100%;
+    background-color: #fff;
     transition: left 0.3s ease-in-out;
 }
 
 .navbar a:hover::before {
-    left: 0; /* Siirtää viivan paikalleen */
+    left: 0;
 }
 
 .navbar a.active {
     background-color: rgba(255, 255, 255, 0.313);
     color: #fff;
 }
-/*NAVBAR säädöt loppuu*/
 
-/* Linkki NAVBAR säädöt alkaa */
+/* NAVBAR_B (jos käytössä) */
 .navbar_b {
     display: flex;
-    justify-content: left; /* Keskittää linkit vaakasuunnassa */
+    justify-content: left;
     padding: 20px;
 }
 
 .navbar_b a {
     margin: 0 15px;
     text-decoration: none;
-    color: #fff; /* Valkoinen teksti */
-    font-weight: bold; /* Tekee fontista boldatun */
-    position: relative; /* Asettaa suhteellisen sijainnin */
+    color: #fff;
+    font-weight: bold;
+    position: relative;
     overflow: hidden;
 }
 
@@ -85,30 +81,26 @@ header, main, footer, .navbar {
     width: 100%;
     height: 2px;
     bottom: 0;
-    left: -100%; /* Piilottaa viivan vasemmalle */
-    background-color: #fff; /* Valkoinen viiva */
+    left: -100%;
+    background-color: #fff;
     transition: left 0.3s ease-in-out;
 }
 
 .navbar_b a:hover::before {
-    left: 0; /* Siirtää viivan paikalleen */
+    left: 0;
 }
 
 .navbar_b a.active {
     background-color: rgba(255, 255, 255, 0.5);
     color: #fff;
 }
-/*Linkki NAVBAR säädöt loppuu*/
 
-
-
-main, header, footer {
+/* Yleiset elementit */
+header, main, footer {
     padding: 20px;
 }
 
-
-
-/*Somelinkkien asetuksia sivun alaosassa*/
+/* Sosiaalisen median linkit footerissa */
 .social-media {
     display: flex;
     justify-content: center;
@@ -124,16 +116,16 @@ main, header, footer {
 header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Keskittää sisällön vaakasuunnassa */
-    flex-direction: column; /* Asettaa sisällön pystysuunnassa */
+    justify-content: center;
+    flex-direction: column;
 }
-
 
 main {
     padding: 1em;
-    min-height: calc(100vh - 160px); /* Varmistaa, että main-osio täyttää vähintään koko näytön korkeuden */
+    min-height: calc(100vh - 160px);
 }
 
+/* Footer */
 footer {
     background-color: black;
     color: rgba(237, 234, 234, 0.024);
@@ -151,27 +143,28 @@ footer {
 }
 
 .footer-logo-img {
-    width: 100px; /* Asettaa logon leveyden footerissa */
-    height: auto; /* Säilyttää kuvasuhteen */
+    width: 100px;
+    height: auto;
 }
 
+/* Video container */
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+    background-color: rgba(15, 15, 15, 0.73);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
-    width: 80vw; /* 80% of the viewport width */
-    height: 45vw; /* 45% of the viewport width to maintain 16:9 aspect ratio */
-    max-width: 800px; /* Maximum width */
-    max-height: 450px; /* Maximum height */
+    width: 80vw;
+    height: 45vw;
+    max-width: 800px;
+    max-height: 450px;
     margin: 0 auto;
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+    background-color: rgba(15, 15, 15, 0.73);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 iframe {
@@ -179,36 +172,18 @@ iframe {
     height: auto;
 }
 
-main {
-    display: flex;
-}
-
-
-/* Tämä on seura-sivulla oleva lista-ominaisuus.*/
-.left-column, .right-column ol {
-    columns: 2; /* Jakaa listan kahteen sarakkeeseen */
-    font-size: 0.9em; /* Pienentää fonttikokoa */
-}
-
-.left-column,.right-column ul {
-    list-style-type:none; /* Poistaa listamerkit */
-    padding: 2px;;
-    margin: 2;
-}
-
-.left-column,.right-column ul li {
-    margin-bottom: 5px; /* Lisää väliä listan kohtien väliin */
-}
-
+/* Flex container */
 .flex-container {
     display: flex;
-    justify-content: center; /* Keskittää sarakkeet vaakasuunnassa */
-    gap: 20px; /* Muuta tätä arvoa saadaksesi sarakkeet lähemmäksi tai kauemmaksi toisistaan */
-    padding: 20px; /* Lisää tilaa reunoille */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
-.text-column,.calculator-column {
+
+/* Teksti- ja laskuriosiot */
+.text-column, .calculator-column {
     background-color: rgba(63, 53, 53, 0.228);
     flex: 1;
 }
@@ -218,24 +193,24 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .calculator-column form label {
+.calculator-column form label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-  }
+}
   
-  .calculator-column form input {
+.calculator-column form input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
   
-  .calculator-column form button {
-    background-color: #0d0d0d,0.7;
+.calculator-column form button {
+    background-color: rgba(13, 13, 13, 0.7);
     color: #7b91eb;
     border: none;
     padding: 10px 20px;
@@ -243,78 +218,120 @@ main {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
-  .calculator-column form button:hover {
+.calculator-column form button:hover {
     background-color: #555;
-  }
+}
   
-  /* Varmista, että myös tekstisarakkeen sisältö näyttää hyvältä */
-  .text-column {
-    background-color: black,0.9;
+.text-column {
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
-  }
-
-.left-column, .right-column {
-    flex: 1; /* Määrittelee sarakkeiden suhteellisen koon */
-    padding: 20px;
-    min-width: 200px; /* Varmistaa, että sarakkeet eivät ole liian kapeita */
-    max-width: 400px; /* Rajoittaa sarakkeiden maksimileveyden */
-  
 }
 
+/* Vanhemmat sarakeasetukset (jos käytössä) */
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+/* Content -sivu */
 .content {
     display: flex;
-    flex-wrap: wrap; /* Korjattu flex-wrap */
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73); /* Lisää varjon */
+    flex-wrap: wrap;
+    background-color: rgba(15, 15, 15, 0.73);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);
 }
 
-
-/* Instagram feedin omat jutut */
-
+/* Instagram feed */
 .instagram-feed {
-    display:flex;
-    justify-content:flex-end;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin: 0px 0;
-    width: 50%; /* Asettaa leveydeksi 100% */
+    margin: 0;
+    width: 50%;
 }
+
 .instagram-feed-tapahtumat {
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    margin: 0px 0;
-    width: 50%; /* Asettaa leveydeksi 100% */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    width: 50%;
 }
 
 .elfsight-app-f8759532-5bef-4587-9616-bb6d210a90ef {
-    width: 80%; /* Asettaa syötteen leveydeksi 80% */
-    max-width: 800px; /* Rajoittaa syötteen maksimileveyden */
+    width: 80%;
+    max-width: 800px;
 }
 
-
 .sk-ww-facebook-group-posts {
-    color: white!important; /* Vaihda haluamasi väri tähän */
-    display:flex;
-    justify-content:flex-end;
+    color: white !important;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin: 0px 0;
-    width: 50%; /* Asettaa leveydeksi 100% */
+    margin: 0;
+    width: 50%;
 }
 
 .sk-ww-facebook-group-posts .post-content {
-    color:white !important; /* Vaihda haluamasi väri tähän */
-    display:flex;
-    justify-content:flex-end;
+    color: white !important;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin: 0px 0;
-    width: 10%; /* Asettaa leveydeksi 100% */
+    margin: 0;
+    width: 10%;
 }
 
+/* Mobiiliasetukset */
 @media (max-width: 768px) {
+    /* Flex-container sarakkeet allekkain */
     .flex-container {
-      flex-direction: column;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
-  }
+    
+    /* Navigaatio pinoava */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a {
+        margin: 5px 0;
+    }
+    
+    /* Pienennä logoa */
+    .logo {
+        width: 300px;
+    }
+    
+    /* Teksti- ja laskuriosiot täyteen leveyteen */
+    .text-column, .calculator-column {
+        width: 100%;
+    }
+    
+    /* Video iframe täysleveäksi */
+    .video-container iframe {
+        width: 100vw;
+        height: auto;
+    }
+    
+    /* Lista-asetukset: vaihda 1-sarakkeiseen asetteluun */
+    .left-column, .right-column ol {
+        columns: 1;
+    }
+    
+    /* Instagram feed ja Facebook-postaukset täyteen leveyteen */
+    .instagram-feed,
+    .instagram-feed-tapahtumat,
+    .sk-ww-facebook-group-posts {
+        width: 100%;
+    }
+    .sk-ww-facebook-group-posts .post-content {
+        width: 100%;
+    }
+}
