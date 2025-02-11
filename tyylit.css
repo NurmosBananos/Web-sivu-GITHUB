@@ -62,12 +62,14 @@ header, main, footer, .navbar {
 /* NAVBAR_B (jos käytössä) */
 .navbar_b {
     display: flex;
-    justify-content: left;
-    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: rgba(15, 15, 15, 0.1);
 }
 
 .navbar_b a {
-    margin: 0 15px;
+    margin: 5px 10px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
