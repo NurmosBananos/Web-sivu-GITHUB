@@ -1,4 +1,5 @@
-/* Sivuston asetuksia, taustakuvat yms */
+/*Sivuston asetuksia, taustakuvat yms*/
+
 body {
     background-image: url('media/tausta1.jpg');
     background-size: cover;
@@ -11,17 +12,19 @@ body {
 }
 
 .logo {
-    width: 80%; /* Käytetään prosenttia joustavuuden parantamiseksi */
-    max-width: 600px; /* Maksimileveys suuremmilla näytöillä */
-    height: auto;
+    width: 600px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
 }
 
-/* Header, main, footer ja navbar taustakuvan määritys */
+
+/*Header, main, footer .nacvbar taustakuvan määritys*/
 header, main, footer, .navbar {
+   
     padding: 20px;
     background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
+
 
 /* NAVBAR säädöt alkaa */
 .navbar {
@@ -55,17 +58,57 @@ header, main, footer, .navbar {
 }
 
 .navbar a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.313);
     color: #fff;
 }
-/* NAVBAR säädöt loppuu */
+/*NAVBAR säädöt loppuu*/
 
-/* Header, main ja footer marginaalit */
+/* Linkki NAVBAR säädöt alkaa */
+.navbar_b {
+    display: flex;
+    justify-content: left; /* Keskittää linkit vaakasuunnassa */
+    padding: 20px;
+}
+
+.navbar_b a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff; /* Valkoinen teksti */
+    font-weight: bold; /* Tekee fontista boldatun */
+    position: relative; /* Asettaa suhteellisen sijainnin */
+    overflow: hidden;
+}
+
+.navbar_b a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: -100%; /* Piilottaa viivan vasemmalle */
+    background-color: #fff; /* Valkoinen viiva */
+    transition: left 0.3s ease-in-out;
+}
+
+.navbar_b a:hover::before {
+    left: 0; /* Siirtää viivan paikalleen */
+}
+
+.navbar_b a.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+/*Linkki NAVBAR säädöt loppuu*/
+
+
+
 main, header, footer {
     padding: 20px;
 }
 
-/* Somelinkkien asetuksia sivun alaosassa */
+
+
+/*Somelinkkien asetuksia sivun alaosassa*/
 .social-media {
     display: flex;
     justify-content: center;
@@ -78,7 +121,6 @@ main, header, footer {
     height: 40px;
 }
 
-/* Headerin sisällön keskittäminen */
 header {
     display: flex;
     align-items: center;
@@ -86,13 +128,12 @@ header {
     flex-direction: column; /* Asettaa sisällön pystysuunnassa */
 }
 
-/* Mainin korkeuden asettaminen */
+
 main {
     padding: 1em;
     min-height: calc(100vh - 160px); /* Varmistaa, että main-osio täyttää vähintään koko näytön korkeuden */
 }
 
-/* Footerin tyylit */
 footer {
     background-color: black;
     color: rgba(237, 234, 234, 0.024);
@@ -103,7 +144,6 @@ footer {
     bottom: 0;
 }
 
-/* Footerin logo */
 .footer-logo {
     display: flex;
     justify-content: center;
@@ -115,14 +155,13 @@ footer {
     height: auto; /* Säilyttää kuvasuhteen */
 }
 
-/* Video-container tyylit */
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    background-color: rgba(15, 15, 15, 0.02); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02); /* Lisää varjon */
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
 .video-container iframe {
@@ -131,7 +170,7 @@ footer {
     max-width: 800px; /* Maximum width */
     max-height: 450px; /* Maximum height */
     margin: 0 auto;
-    background-color: rgba(15, 15, 15, 0.020); /* Taustaväri */
+    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
@@ -140,7 +179,12 @@ iframe {
     height: auto;
 }
 
-/* Joustavat sarakkeet */
+main {
+    display: flex;
+}
+
+
+/* Tämä on seura-sivulla oleva lista-ominaisuus.*/
 .left-column, .right-column ol {
     columns: 1; /* Jakaa listan kahteen sarakkeeseen */
     font-size: 0.9em; /* Pienentää fonttikokoa */
@@ -168,6 +212,7 @@ iframe {
     padding: 20px;
     min-width: 200px; /* Varmistaa, että sarakkeet eivät ole liian kapeita */
     max-width: 400px; /* Rajoittaa sarakkeiden maksimileveyden */
+  
 }
 
 .content {
@@ -177,21 +222,22 @@ iframe {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
-/* Instagram feedin omat jutut */
-.instagram-feed {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0px 0;
-    width: 50%; /* Asettaa leveydeksi 50% */
-}
 
-.instagram-feed-tapahtumat {
-    display: flex;
-    justify-content: flex-end;
+/* Instagram feedin omat jutut */
+
+.instagram-feed {
+    display:flexbox;
+    justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
-    width: 60%; /* Asettaa leveydeksi 60% */
+    width: 50%; /* Asettaa leveydeksi 100% */
+}
+.instagram-feed-tapahtumat {
+    display:flexbox;
+    justify-content:flex-end;
+    align-items:center;
+    margin: 0px 0;
+    width: 60%; /* Asettaa leveydeksi 100% */
 }
 
 .elfsight-app-f8759532-5bef-4587-9616-bb6d210a90ef {
@@ -199,79 +245,21 @@ iframe {
     max-width: 800px; /* Rajoittaa syötteen maksimileveyden */
 }
 
+
 .sk-ww-facebook-group-posts {
-    color: white(255, 255, 255)!important; /* Vaihda haluamasi väri tähän */
-    display: flex;
-    justify-content: flex-end;
+    color: white!important; /* Vaihda haluamasi väri tähän */
+    display:flexbox;
+    justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
-    width: 50%; /* Asettaa leveydeksi 50% */
+    width: 50%; /* Asettaa leveydeksi 100% */
 }
 
 .sk-ww-facebook-group-posts .post-content {
-    color:white(255, 255, 255) !important; /* Vaihda haluamasi väri tähän */
-    display: flex;
-    justify-content: flex-end;
+    color:white !important; /* Vaihda haluamasi väri tähän */
+    display:flexbox;
+    justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
-    width: 10%; /* Asettaa leveydeksi 10% */
+    width: 10%; /* Asettaa leveydeksi 100% */
 }
-
-/* Mobiiliystävälliset muutokset */
-@media (max-width: 768px) {
-    /* Logo */
-    .logo {
-        width: 80%; /* Käytetään prosenttia joustavuuden parantamiseksi */
-        max-width: 500px;
-    }
-
-    /* Navbarin linkit keskitetään pystysuoraan */
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-    }
-    
-    .navbar a {
-        margin: 10px 0; /* Linkkien väli kasvaa */
-    }
-
-    /* Video-asetukset */
-    .video-container iframe {
-        width: 100%;
-        height: 56.25vw; /* 16:9 kuvasuhteen säilyttäminen */
-    }
-
-    /* Sarakkeet (left-column, right-column) päällekkäin mobiilissa */
-    .left-column, .right-column {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    /* Footerin säädöt */
-    footer {
-        padding: 10px;
-    }
-
-    .footer-logo-img {
-        width: 80px; /* Pienennetään logoa mobiilissa */
-    }
-
-    /* Instagram ja Facebook feedit */
-    .instagram-feed, .sk-ww-facebook-group-posts {
-        width: 100%; /* Leveys 100% mobiilissa */
-    }
-    .flex-container {
-        flex-direction: column; /* Sarakkeet päällekkäin mobiililaitteilla */
-        align-items: center; /* Keskittää sarakkeet */
-    }
-
-    .left-column, .right-column {
-        max-width: 100%; /* Sarakkeet vievät koko tilan mobiililaitteella */
-        margin-bottom: 20px; /* Lisää tilaa sarakkeiden väliin */
-    }
-
-    .left-column ul, .right-column ul {
-        font-size: 0.8em; /* Pienentää fonttikokoa mobiilissa */
-    }
-}
-
