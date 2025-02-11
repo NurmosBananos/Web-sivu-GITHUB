@@ -21,7 +21,7 @@ body {
 header, main, footer, .navbar {
    
     padding: 20px;
-    background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
+    background-color: rgba(15, 15, 15, 0.1); /* Taustaväri */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
 }
 
@@ -203,9 +203,58 @@ main {
 .flex-container {
     display: flex;
     justify-content: center; /* Keskittää sarakkeet vaakasuunnassa */
-    gap: 0px; /* Muuta tätä arvoa saadaksesi sarakkeet lähemmäksi tai kauemmaksi toisistaan */
-    padding: 0px; /* Lisää tilaa reunoille */
+    gap: 20px; /* Muuta tätä arvoa saadaksesi sarakkeet lähemmäksi tai kauemmaksi toisistaan */
+    padding: 20px; /* Lisää tilaa reunoille */
+    max-width: 1200px;
+    margin: 0 auto;
 }
+.text-column,.calculator-column {
+    background-color: rgba(63, 53, 53, 0.228);
+    flex: 1;
+}
+
+.calculator-column form {
+    background-color: rgba(63, 53, 53, 0.228);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calculator-column form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .calculator-column form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .calculator-column form button {
+    background-color: #0d0d0d,0.7;
+    color: #7b91eb;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .calculator-column form button:hover {
+    background-color: #555;
+  }
+  
+  /* Varmista, että myös tekstisarakkeen sisältö näyttää hyvältä */
+  .text-column {
+    background-color: black,0.9;
+    padding: 20px;
+    border-radius: 8px;
+  }
 
 .left-column, .right-column {
     flex: 1; /* Määrittelee sarakkeiden suhteellisen koon */
@@ -263,3 +312,9 @@ main {
     margin: 0px 0;
     width: 10%; /* Asettaa leveydeksi 100% */
 }
+
+@media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }

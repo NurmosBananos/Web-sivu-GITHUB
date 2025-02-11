@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakeus Discgolf</title>
-    <link rel="stylesheet" href="../tyylit.css">
-    <link rel="icon" href="../media/icon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakeus Discgolf</title>
+  <link rel="stylesheet" href="../tyylit.css">
+  <link rel="icon" href="../media/icon.png" type="image/png">
+  <!-- Google Fonts esimerkkinä -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body onload="alusta();">
-    <header>
-        <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="logo">
-    </header>
-    <div class="navbar">
-        <a href="../index.html">Etusivu</a>
-        <a href="../sivut/tapahtumat.html">Tapahtumat</a>
-        <a href="../sivut/seura.html">Seura</a>
-        <a href="../sivut/jasenyydet.html">Jäsenyydet</a>
-        <a href="https://www.lakeusdiscgolf.com" target="_blank">Linkki viralliselle kotisivulle</a>
+  <header>
+    <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="logo">
+  </header>
+
+  <nav class="navbar">
+    <a href="../index.html">Etusivu</a>
+    <a href="../sivut/tapahtumat.html">Tapahtumat</a>
+    <a href="../sivut/seura.html">Seura</a>
+    <a href="../sivut/jasenyydet.html">Jäsenyydet</a>
+    <a href="https://www.lakeusdiscgolf.com" target="_blank">Linkki viralliselle kotisivulle</a>
+  </nav>
+
+  <!-- Flexbox-kontaineri, jossa vasen tekstiosa ja oikea laskuri -->
+  <main class="flex-container">
+    <!-- Vasen sarake: Tekstiosa -->
+    <div class="text-column">
+      <h2>Tervetuloa Lakeus Discgolf ry:n jäseneksi</h2>
+      <p>Jäsenyydet ovat myynnissä Suomisportissa.</p>
+      <p>Liittymällä seuraan säästät lajikustannuksissa.</p>
+      <p>Prismasta saat esimerkiksi 10% alennusta.</p>
+      <p>Laskurilla saat laskettua, paljonko säästät vuoden aikana hankinnoissa, jos ostat tuotteita jäsenalennuksella.</p>
     </div>
 
-    <main>
-        <section id="home">
-            <h2>Tervetuloa Lakeus Discgolf ry:n jäseneksi</h2>
-            <p>Jäsenyydet ovat myynnissä Suomisportissa.</p>
-            <p>Liittymällä seuraan säästät lajikustannuksissa.</p>
-            <p>Prismasta saat esimerkiksi 10% alennusta</p>
-            <p>Laskurilla saat laskettua, paljonko säästät vuoden aikana hankinnoissa, jos ostat tuotteita jäsenalennuksella</p>
+    <!-- Oikea sarake: Laskuri / ostoskori -->
+    <div class="calculator-column">
+      <form id="ostoskoriForm">
+        <h3>Säästölaskuri</h3>
+        <label for="tuoteNimi">Tuotteen nimi:</label>
+        <input type="text" id="tuoteNimi" placeholder="Tuotteen nimi" required>
+        
+        <label for="montako">Montako kappaletta:</label>
+        <input type="number" id="montako" min="1" required>
+        
+        <label for="hinta">Hinta per kappale (euroa):</label>
+        <input type="number" id="hinta" min="0.01" step="0.01" required>
+        
+        <button type="button" onclick="lisaaOstoskoriin()">Lisää ostoskoriin</button>
+        <button type="button" onclick="tyhjennaOstoskori()">Tyhjennä ostoskori</button>
+      </form>
+      
+      <h3>Ostoskori</h3>
+      <div id="ostoskori"></div>
+      <p id="kokonaisHinta"></p>
+      <p id="saasto"></p>
+    </div>
+  </main>
 
-            <!-- Tuotteen lisääminen ostoskoriin -->
-            <h3>Lisää tuote ostoskoriin</h3>
-            <label for="tuoteNimi">Tuotteen nimi:</label>
-            <input type="text" id="tuoteNimi" placeholder="Tuotteen nimi" required><br>
+  <footer>
+    <div class="footer-logo">
+      <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="footer-logo-img">
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/groups/581751429427821" target="_blank">
+        <img src="../media/facebook_color.png" alt="Facebook Logo" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/lakeusdiscgolf" target="_blank">
+        <img src="../media/instagram_color.png" alt="Instagram Logo" class="social-icon">
+      </a>
+      <a href="https://www.youtube.com/@ahonkylafrisbeegolf3352" target="_blank">
+        <img src="../media/youtube_color.png" alt="YouTube Logo" class="social-icon">
+      </a>
+    </div>
+  </footer>
 
-            <label for="montako">Montako kappaletta:</label>
-            <input type="number" id="montako" min="1" required><br>
-
-            <label for="hinta">Hinta per kappale (euroa):</label>
-            <input type="number" id="hinta" min="0.01" step="0.01" required><br>
-
-            <button onclick="lisaaOstoskoriin()">Lisää ostoskoriin</button>
-
-            <!-- Tyhjennysnappi -->
-            <button onclick="tyhjennaOstoskori()">Tyhjennä ostoskori</button>
-
-            <h3>Ostoskori</h3>
-            <div id="ostoskori"></div>
-            <p id="kokonaisHinta"></p>
-            <p id="saasto"></p>
-
-            <div>
-                <h2>Alla linkit jäsenyyksiin</h2>
-            </div>
-             <div class="navbar_b">
-                <a href="https://seurat.suomisport.fi/invite/76d51204-c86f-4926-90c3-8a2225e839ac" target="_blank"> Aikusten jäsenyys</a>
-                
-                <a href="https://seurat.suomisport.fi/invite/4491ce6f-6bba-49db-be2e-8e5255cb3427" target="_blank"> Junioreiden jäsenyys</a>
-            </div>
-            
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-logo">
-            <img src="../media/logo.png" alt="Lakeus Discgolf Logo" class="footer-logo-img">
-        </div>
-        <div class="social-media">
-            <a href="https://www.facebook.com/groups/581751429427821" target="_blank">
-                <img src="../media/facebook_color.png" alt="Facebook Logo" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/lakeusdiscgolf" target="_blank">
-                <img src="../media/instagram_color.png" alt="Instagram Logo" class="social-icon">
-            </a>
-            <a href="https://www.youtube.com/@ahonkylafrisbeegolf3352" target="_blank">
-                <img src="../media/youtube_color.png" alt="YouTube Logo" class="social-icon">
-            </a>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
