@@ -186,15 +186,15 @@ iframe {
 
 /* Teksti- ja laskuriosiot */
 .text-column, .calculator-column {
-    background-color: rgba(63, 53, 53, 0.228);
+    background-color: rgba(8, 8, 8, 0.2);
     flex: 1;
 }
 
 .calculator-column form {
-    background-color: rgba(63, 53, 53, 0.228);
+    background-color: rgb(7, 7, 7,0.2);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.228);
 }
   
 .calculator-column form label {
@@ -208,16 +208,16 @@ iframe {
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
 }
   
 .calculator-column form button {
-    background-color: rgba(13, 13, 13, 0.7);
+    background-color: rgba(13, 13, 13, 0.2);
     color: #7b91eb;
     border: none;
     padding: 10px 20px;
     margin-top: 15px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -227,9 +227,9 @@ iframe {
 }
   
 .text-column {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 /* Vanhemmat sarakeasetukset (jos käytössä) */
