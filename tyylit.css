@@ -337,16 +337,18 @@ iframe {
 }
 
 @media (max-width: 768px) {
-    /* Navbar asetukset mobiilille */
+    /* Mobiili: aseta navbar pystysuoraan ja täysleveäksi */
     .navbar {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 10px; /* pienempi padding */
-        background-color: rgba(15, 15, 15, 0.8); /* tummempi ja vähemmän läpinäkyvä tausta */
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 10px; /* pienennä tarvittaessa */
     }
+    
     .navbar a {
-        margin: 5px 0; /* pienemmät marginaalit linkkien välillä */
-        font-size: 1.2em; /* tarvittaessa suurennetaan fonttia */
+      margin: 5px 0;       /* pienemmät marginaalit */
+      width: 100%;         /* vie koko leveyden */
+      text-align: center;  /* keskitetty teksti */
+      font-size: 16px;     /* säädä fonttikokoa tarvittaessa */
     }
-}
+  }
