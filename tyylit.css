@@ -165,7 +165,7 @@ footer {
     max-width: 800px;
     max-height: 450px;
     margin: 0 auto;
-    background-color: rgba(15, 15, 15, 0.73);
+    background-color: rgba(15, 15, 15, 0.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
