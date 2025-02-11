@@ -186,12 +186,12 @@ main {
 
 /* Tämä on seura-sivulla oleva lista-ominaisuus.*/
 .left-column, .right-column ol {
-    columns: 1; /* Jakaa listan kahteen sarakkeeseen */
+    columns: 2; /* Jakaa listan kahteen sarakkeeseen */
     font-size: 0.9em; /* Pienentää fonttikokoa */
 }
 
 .left-column,.right-column ul {
-    list-style-type:circle; /* Poistaa listamerkit */
+    list-style-type:none; /* Poistaa listamerkit */
     padding: 2px;;
     margin: 2;
 }
@@ -226,18 +226,18 @@ main {
 /* Instagram feedin omat jutut */
 
 .instagram-feed {
-    display:flexbox;
+    display:flex;
     justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
     width: 50%; /* Asettaa leveydeksi 100% */
 }
 .instagram-feed-tapahtumat {
-    display:flexbox;
+    display:flex;
     justify-content:flex-end;
     align-items:center;
     margin: 0px 0;
-    width: 60%; /* Asettaa leveydeksi 100% */
+    width: 50%; /* Asettaa leveydeksi 100% */
 }
 
 .elfsight-app-f8759532-5bef-4587-9616-bb6d210a90ef {
@@ -248,7 +248,7 @@ main {
 
 .sk-ww-facebook-group-posts {
     color: white!important; /* Vaihda haluamasi väri tähän */
-    display:flexbox;
+    display:flex;
     justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
@@ -257,7 +257,7 @@ main {
 
 .sk-ww-facebook-group-posts .post-content {
     color:white !important; /* Vaihda haluamasi väri tähän */
-    display:flexbox;
+    display:flex;
     justify-content:flex-end;
     align-items: center;
     margin: 0px 0;
