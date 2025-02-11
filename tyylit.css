@@ -295,13 +295,16 @@ iframe {
         padding: 10px;
     }
     
-    /* Navigaatio pinoava */
     .navbar {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 10px; /* pienempi padding */
+        background-color: rgba(15, 15, 15, 0.8); /* tummempi ja vähemmän läpinäkyvä tausta */
     }
     .navbar a {
-        margin: 5px 0;
+        margin: 5px 0; /* pienemmät marginaalit linkkien välillä */
+        font-size: 1.2em; /* tarvittaessa suurennetaan fonttia */
     }
     
     /* Pienennä logoa */
