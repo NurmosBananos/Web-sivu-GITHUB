@@ -271,16 +271,19 @@ iframe {
 }
 
 .sk-ww-facebook-group-posts {
-    color: white !important;
+    color: white;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin: 0;
     width: 50%;
 }
+.sk-ww-facebook-group-posts a {
+    color: white !important;
+  }
 
 .sk-ww-facebook-group-posts .post-content {
-    color: white !important;
+    color: white;
     display: flex;
     justify-content: flex-end;
     align-items: center;
