@@ -268,7 +268,7 @@ main {
     display: flex;
     flex-wrap: wrap; /* Korjattu flex-wrap */
     background-color: rgba(15, 15, 15, 0.73); /* Taustaväri */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjon */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73); /* Lisää varjon */
 }
 
 
