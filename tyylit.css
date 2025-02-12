@@ -283,7 +283,7 @@ iframe {
   }
 
 .sk-ww-facebook-group-posts .post-content {
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: flex-end;
     align-items: center;
