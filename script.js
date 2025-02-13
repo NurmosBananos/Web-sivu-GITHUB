@@ -54,7 +54,7 @@ function paivitaOstoskori() {
     // Näytä kokonaishinta ja säästö
     let kokonaishinta = yhteishinta * 0.9; // 10% alennus
     document.getElementById('kokonaisHinta').innerText = `Kokonaishinta alennuksella: ${kokonaishinta.toFixed(2)} euroa`;
-    document.getElementById('saasto').innerText = `Säästetty summa: ${(yhteishinta - kokonaishinta).toFixed(2)} euroa`;
+    document.getElementById('saasto').innerText = `Säästetty summa: ${(yhteishinta - kokonaishinta).toFixed(2)} €`;
 }
 
 // Funktio tyhjentää ostoskori
