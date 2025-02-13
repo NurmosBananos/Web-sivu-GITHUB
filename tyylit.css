@@ -103,7 +103,7 @@ body {
   .home-section {
     display:contents;
     
-    align-items: center;
+    align-items: left;
     background-color: rgba(4, 4, 4, 0.628);
     border-radius: 8px;
     padding: 16x;
@@ -121,6 +121,7 @@ body {
 
   .sk-solution-holder {
     color: #fff;
+    align-items: left;
     background-color: rgba(4, 4, 4, 0.628);
     border-radius: 8px;
     margin-bottom: 20px;
