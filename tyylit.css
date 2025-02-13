@@ -56,8 +56,9 @@ html, body {
     flex-wrap: wrap;
     padding: 3px 6px; /* Vähennetään pystysuuntaista tilaa */
     background-color: rgba(15, 15, 15, 0.8);
-    max-width: 1800px; /* Rajoitetaan leveyttä */
+    max-width: 2000px; /* Rajoitetaan leveyttä */
     margin: 0 auto;
+    margin-bottom: 5px; /* Lisää tilaa navigaation ja seuraavan osion väliin */
 }
 
 /* Linkkien muotoilu */
@@ -314,7 +315,7 @@ ul {
 .text-column, .calculator-column {
     flex: 1;
     background-color: rgba(0, 0, 0, 0.7); /* Musta tausta */
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     min-width: 300px; /* Estää liian pienen koon */
 }
