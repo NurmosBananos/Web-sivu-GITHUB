@@ -86,8 +86,13 @@ body {
 /* Facebook-widgetin yleiset tyylit */
 .sk-ww-facebook-group-posts {
     background-color: #00000000;  /* Musta tausta */
-    color: #fffffff6;             /* Valkoinen teksti */
+    display: flex;
+    color: #ffffff00;             /* Valkoinen teksti */
     padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 20px;
   }
 
   .facebook-feed-user-root-container {
@@ -124,12 +129,19 @@ body {
   }
 
   body > main > div > div.sk-solution-holder > div.facebook-feed-user-root-container > div > div.sk-facebook-feed-profile-info.width-60 {
-
-    width: 100%;
-    padding: 1rem;
+    width: 80%;           
+    max-width: 800px;     
+    height: 400px;        
+    padding: 20px;        
     background-color: #f8f7f7;
+    margin: 20px auto;    /* Keskittää elementin vaakasuunnassa */
+    border-radius: 20px;  /* Pyöristetyt kulmat */
+    box-sizing: border-box; /* Sisältää paddingin elementin kokoon */
+}
+
+
     
-  }
+  
 
 
 /* ============================= */
