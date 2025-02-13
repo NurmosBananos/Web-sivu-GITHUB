@@ -113,6 +113,51 @@ html, body {
 }
 
 /* ============================= */
+/* ETUSIVUN TYYLIT (section id="home") */
+/* ============================= */
+#home {
+    max-width: 800px; /* Rajoitetaan leveyttä */
+    width: 90%;
+    margin: 40px auto; /* Keskittää osion */
+    background-color: rgba(0, 0, 0, 0.7); /* Tumma tausta */
+    padding: 20px;
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    text-align: center;
+    color: #fff;
+}
+
+/* Otsikon tyyli */
+#home h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Kappaleiden tyyli */
+#home p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* ============================= */
+/* MOBIILINÄKYMÄ */
+/* ============================= */
+@media (max-width: 768px) {
+    #home {
+        width: 95%; /* Skaalautuu pienemmillä näytöillä */
+        padding: 15px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+}
+
+/* ============================= */
 /* LISTAN TYYLI – POISTA PALLOT */
 /* ============================= */
 ul {
