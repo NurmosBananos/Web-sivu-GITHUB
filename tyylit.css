@@ -101,13 +101,12 @@ body {
   
   /* Tapahtumatiedot */
   .home-section {
-    display:contents;
-    
-    align-items: left;
-    background-color: rgba(4, 4, 4, 0.628);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
-    padding: 16x;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
   }
   
   /* Facebook-widget ulkoasu */
