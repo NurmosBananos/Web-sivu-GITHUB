@@ -1,7 +1,13 @@
 /* ============================= */
-/* YLEISET ASETUKSET & TAUSTA */
+/* RESET & YLEISET ASETUKSET */
 /* ============================= */
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     background-image: url('media/tausta1.jpg');
     background-size: cover;
     background-position: center;
@@ -10,13 +16,29 @@ body {
     color: #fff;
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
+    overflow-x: hidden; /* Estetään vaakasuuntainen vieritys */
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* KESKITYTYT KONTAKTORI */
+/* ============================= */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 /* ============================= */
 /* LOGO */
 /* ============================= */
 .logo {
-    width: 450px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 40px auto;
@@ -28,8 +50,8 @@ body {
 .navbar, .navbar_b {
     display: flex;
     justify-content: center;
-    padding: 20px;
     flex-wrap: wrap;
+    padding: 20px;
     background-color: rgba(15, 15, 15, 0.8);
 }
 
@@ -38,200 +60,73 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    position: relative;
     transition: color 0.3s;
 }
 
-.navbar a::before, .navbar_b a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.navbar a:hover::before, .navbar_b a:hover::before {
-    transform: scaleX(1);
-}
-
 /* ============================= */
-/* FLEX-CONTAINERIT (SIVUKOHTAISET) */
+/* SISÄLLÖN PERUSASETUKSET */
 /* ============================= */
-.flexcontainer-index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.flexcontainer-jasenyydet {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Facebook-widgetin yleiset tyylit */
-/* Yleiset asetukset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
-  }
-  
-  /* Kontaineri */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Tapahtumatiedot */
-  .home-section {
+.home-section {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     padding: 20px;
     margin: 20px auto;
     width: 90%;
     max-width: 600px;
-  }
-  
-  /* Facebook-widget ulkoasu */
-  .sk-ww-facebook-group-posts {
-
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 16px;
-    color: #fff;
-  }
-
-  .sk-solution-holder {
-    color: #fff;
-    align-items: left;
-    background-color: rgba(4, 4, 4, 0.628);
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  /* Facebook-postaukset gridinä */
-  .sk-ww-facebook-group-posts .post-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  
-  /* Responsiivisuus */
-  @media (max-width: 1024px) {
-    .sk-ww-facebook-group-posts .post-content {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .sk-ww-facebook-group-posts .post-content {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-
-
-    
-  
-
+}
 
 /* ============================= */
-/* MEDIA-OSIO (VIDEO & KUVA) */
+/* FLEX-KONTAKTORI */
+/* ============================= */
+.flexcontainer-index, .flexcontainer-jasenyydet {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sk-solution-holder{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+/* ============================= */
+/* MEDIA-OSIO */
 /* ============================= */
 .media-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px; /* Lisää väliä kuvan ja videon väliin */
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
-.video-container, .photo-container {
-    flex: 1;
-    min-width: 400px;
-    max-width: 600px;
+.photo-container, .video-container {
+    max-width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Läpinäkyvä musta tausta */
     padding: 15px;
     border-radius: 10px;
-    height: 450px; /* Asetetaan molemmille sama korkeus */
 }
 
 .video-container iframe, .photo-container img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     border-radius: 5px;
-}
-
-.video-container h2 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 /* ============================= */
 /* TEKSTI & LASKURI (JÄSENYYDET) */
 /* ============================= */
-.text-column {
+.text-column, .calculator-column {
     flex: 1;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-}
-
-.calculator-column {
-    flex: 1;
-    background-color: rgba(8, 8, 8, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.calculator-column form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.calculator-column input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.calculator-column button {
-    padding: 10px;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.calculator-column button:hover {
-    background-color: #666;
 }
 
 /* ============================= */
@@ -241,9 +136,7 @@ footer {
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     padding: 1em;
-    position: relative;
     width: 100%;
-    bottom: 0;
 }
 
 .footer-logo {
@@ -262,7 +155,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
 }
 
 .social-media img {
@@ -279,8 +171,18 @@ footer {
 /* MOBIILINÄKYMÄN ASETUKSET */
 /* ============================= */
 @media (max-width: 768px) {
-    .flexcontainer-index,
-    .flexcontainer-jasenyydet {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .home-section {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .flexcontainer-index, .flexcontainer-jasenyydet {
         flex-direction: column;
         align-items: center;
     }
@@ -300,6 +202,6 @@ footer {
     }
 
     .logo {
-        width: 380px;
+        width: 80%;
     }
 }
