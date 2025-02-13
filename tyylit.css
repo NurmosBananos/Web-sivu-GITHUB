@@ -2,7 +2,7 @@
 /* YLEISET ASETUKSET & TAUSTA */
 /* ============================= */
 body {
-    background-image: url('../media/tausta1.jpg');
+    background-image: url('media/tausta1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
