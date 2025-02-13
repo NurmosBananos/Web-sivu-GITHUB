@@ -86,14 +86,14 @@ body {
 /* Facebook-widgetin yleiset tyylit */
 .sk-ww-facebook-group-posts {
     background-color: #00000000;  /* Musta tausta */
-    color: #ffffff44;             /* Valkoinen teksti */
+    color: #fffffff6;             /* Valkoinen teksti */
     padding: 20px;
   }
 
   .facebook-feed-user-root-container {
-    background-color: #0c0c0c00; /* Halutessasi taustaväri */
-    padding: 1px;             /* Esimerkkinä sisäistä tilaa */
-    /* Lisää tähän haluamasi CSS-tyylit */
+    background-color: #0c0c0c00;
+    padding: 1px;            
+    
   }
   
   /* Postausalueen flex-asettelu: postaukset vierekkäin pienellä välilyönnillä */
@@ -112,8 +112,7 @@ body {
     box-sizing: border-box;
   }
   
-  /* Esittelytekstin muokkaus: valkoinen teksti ja transparent tausta */
-  /* Muokkaa valitsimia (.widget-intro, .intro) sen mukaan, mikä elementti sisältää esittelytekstin */
+  
   .sk-ww-facebook-group-posts .widget-intro,
   .sk-ww-facebook-group-posts .intro,
   .sk-ww-facebook-group-posts p {
@@ -121,15 +120,15 @@ body {
     background-color: transparent !important;
   }
   body > main > div > div.sk-solution-holder > div.facebook-feed-user-root-container > div > div.sk-facebook-feed-profile-info.width-60 > div.sk_facebook_posts_feed_username_follow > span {
-    color: #f8f8f8d6; /* Vaihda #333 haluamaasi väriarvoon */
+    color: #f8f8f8d6; 
   }
 
   body > main > div > div.sk-solution-holder > div.facebook-feed-user-root-container > div > div.sk-facebook-feed-profile-info.width-60 {
-    /* Esimerkkityylejä */
+
     width: 100%;
     padding: 1rem;
     background-color: #f8f7f7;
-    /* Lisää tarvittavat ominaisuudet tähän */
+    
   }
 
 
