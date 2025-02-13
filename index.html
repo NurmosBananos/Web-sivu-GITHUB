@@ -12,22 +12,28 @@
     <img src="media/logo.png" alt="Lakeus Discgolf Logo" class="logo">
   </header>
   
-  <div class="navbar">
-    <a href="index.html#home">Etusivu</a>
-    <a href="sivut/tapahtumat.html">Tapahtumat</a>
-    <a href="sivut/seura.html">Seura</a>
-    <a href="sivut/jasenyydet.html">Jäsenyydet</a>
-    <a href="https://www.lakeusdiscgolf.com" target="_blank" rel="noopener noreferrer">Linkki viralliselle kotisivulle</a>
-  </div>
+  <nav class="navbar">
+    <a href="index.html#home" aria-label="Siirry etusivulle">Etusivu</a>
+    <a href="sivut/tapahtumat.html" aria-label="Siirry tapahtumat-sivulle">Tapahtumat</a>
+    <a href="sivut/seura.html" aria-label="Siirry seura-sivulle">Seura</a>
+    <a href="sivut/jasenyydet.html" aria-label="Siirry jäsenyydet-sivulle">Jäsenyydet</a>
+    <a href="https://www.lakeusdiscgolf.com" target="_blank" rel="noopener noreferrer" aria-label="Siirry viralliselle kotisivulle">Linkki viralliselle kotisivulle</a>
+  </nav>
   
-  <main class="container">
+  <main class="flexcontainer-index">
     <section id="home">
       <h2>Tervetuloa Lakeus Discgolf ry:n sivuille!</h2>
       <p>Seura on perustettu vuonna 2022.</p>
       <p>Seura on Etelä-Pohjanmaan suurin seura yli 100 jäsenellä.</p>
-      
+    </section>
+    
+    <section class="media-section">
       <div class="video-container">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/zLmN6TDxlgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/zLmN6TDxlgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      
+      <div class="photo-container">
+        <img src="media/ahonkylafrisbeegolf.jpg" alt="Ahonkylä Frisbeegolf-rata" class="photo">
       </div>
     </section>
   </main>

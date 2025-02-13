@@ -1,136 +1,175 @@
-/* Sivuston asetuksia, taustakuvat yms */
+/* ============================= */
+/* YLEISET ASETUKSET & TAUSTA */
+/* ============================= */
 body {
-    background-image: url('media/tausta1.jpg');
+    background-image: url('../media/tausta1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #fff; /* Valkoinen teksti */
-    margin: 1;
-    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
+/* ============================= */
+/* LOGO */
+/* ============================= */
 .logo {
-    width: 600px; /* Oletusleveys, pienenee mobiilissa */
-    height: auto; /* Säilyttää kuvasuhteen */
+    width: 450px;
+    height: auto;
+    display: block;
+    margin: 40px auto;
 }
 
-/* Header, main, footer ja navbar */
-header, main, footer, .navbar {
-    padding: 20px;
-    background-color: rgba(15, 15, 15, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* NAVBAR säädöt */
-.navbar {
+/* ============================= */
+/* NAVIGAATIO */
+/* ============================= */
+.navbar, .navbar_b {
     display: flex;
     justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
+    background-color: rgba(15, 15, 15, 0.8);
 }
 
-.navbar a {
+.navbar a, .navbar_b a {
     margin: 0 15px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     position: relative;
-    overflow: hidden;
+    transition: color 0.3s;
 }
 
-.navbar a::before {
+.navbar a::before, .navbar_b a::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     bottom: 0;
-    left: -100%;
-    background-color: #fff;
-    transition: left 0.3s ease-in-out;
-}
-
-.navbar a:hover::before {
     left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.navbar a.active {
-    background-color: rgba(255, 255, 255, 0.313);
-    color: #fff;
+.navbar a:hover::before, .navbar_b a:hover::before {
+    transform: scaleX(1);
 }
 
-/* NAVBAR_B (jos käytössä) */
-.navbar_b {
+/* ============================= */
+/* FLEX-CONTAINERIT (SIVUKOHTAISET) */
+/* ============================= */
+.flexcontainer-index {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    background-color: rgba(15, 15, 15, 0.1);
-}
-
-.navbar_b a {
-    margin: 5px 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-}
-
-.navbar_b a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: -100%;
-    background-color: #fff;
-    transition: left 0.3s ease-in-out;
-}
-
-.navbar_b a:hover::before {
-    left: 0;
-}
-
-.navbar_b a.active {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #fff;
-}
-
-/* Yleiset elementit */
-header, main, footer {
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Sosiaalisen median linkit footerissa */
-.social-media {
+.flexcontainer-jasenyydet {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.social-icon {
-    width: 40px;
-    height: 40px;
-}
-
-header {
+/* ============================= */
+/* MEDIA-OSIO (VIDEO & KUVA) */
+/* ============================= */
+.media-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 40px; /* Lisää väliä kuvan ja videon väliin */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-container, .photo-container {
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Läpinäkyvä musta tausta */
+    padding: 15px;
+    border-radius: 10px;
+    height: 450px; /* Asetetaan molemmille sama korkeus */
+}
+
+.video-container iframe, .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ============================= */
+/* TEKSTI & LASKURI (JÄSENYYDET) */
+/* ============================= */
+.text-column {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator-column {
+    flex: 1;
+    background-color: rgba(8, 8, 8, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator-column form {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-main {
-    padding: 1em;
-    min-height: calc(100vh - 160px);
+.calculator-column input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-/* Footer */
+.calculator-column button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator-column button:hover {
+    background-color: #666;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 footer {
-    background-color: black;
-    color: rgba(237, 234, 234, 0.024);
+    background-color: rgba(0, 0, 0, 0);
     text-align: center;
     padding: 1em;
     position: relative;
@@ -141,220 +180,57 @@ footer {
 .footer-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
 }
 
 .footer-logo-img {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
-/* Video container */
-.video-container {
+.social-media {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    background-color: rgba(15, 15, 15, 0.73);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-container iframe {
-    width: 80vw;
-    height: 45vw;
-    max-width: 800px;
-    max-height: 450px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-}
-
-iframe {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Flex container */
-.flex-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Teksti- ja laskuriosiot */
-.text-column, .calculator-column {
-    background-color: rgba(8, 8, 8, 0.2);
-    flex: 1;
-}
-
-.calculator-column form {
-    background-color: rgb(7, 7, 7,0.2);
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.228);
-}
-  
-.calculator-column form label {
-    display: block;
+    gap: 15px;
     margin-top: 10px;
-    font-weight: bold;
-}
-  
-.calculator-column form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-}
-  
-.calculator-column form button {
-    background-color: rgba(13, 13, 13, 0.2);
-    color: #7b91eb;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-  
-.calculator-column form button:hover {
-    background-color: #555;
-}
-  
-.text-column {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
 }
 
-/* Vanhemmat sarakeasetukset (jos käytössä) */
-.left-column, .right-column {
-    flex: 1;
-    padding: 20px;
-    min-width: 200px;
-    max-width: 400px;
+.social-media img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Content -sivu */
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(15, 15, 15, 0.73);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);
+.social-media img:hover {
+    transform: scale(1.1);
 }
 
-/* Instagram feed */
-.instagram-feed {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    width: 50%;
-}
-
-.instagram-feed-tapahtumat {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    width: 50%;
-}
-
-.elfsight-app-f8759532-5bef-4587-9616-bb6d210a90ef {
-    color: rgb(255, 255, 255);
-    width: 80%;
-    max-width: 800px;
-}
-
-.sk-ww-facebook-group-posts {
-    color: rgb(5, 5, 5);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    width: 50%;
-}
-.sk-ww-facebook-group-posts a {
-    color: rgb(255, 255, 255) !important;
-  }
-
-.sk-ww-facebook-group-posts .post-content {
-    color: rgb(253, 250, 250);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    width: 10%;
-}
-
-/* Mobiiliasetukset */
+/* ============================= */
+/* MOBIILINÄKYMÄN ASETUKSET */
+/* ============================= */
 @media (max-width: 768px) {
-    /* Flex-container sarakkeet allekkain */
-    .flex-container {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-    
-    /* Navigaatio pinoava */
-    .navbar {
+    .flexcontainer-index,
+    .flexcontainer-jasenyydet {
         flex-direction: column;
         align-items: center;
     }
-    .navbar a {
-        margin: 5px 0;
+
+    .media-section {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    /* Pienennä logoa */
-    .logo {
-        width: 300px;
-    }
-    
-    /* Teksti- ja laskuriosiot täyteen leveyteen */
-    .text-column, .calculator-column {
-        width: 100%;
-    }
-    
-    /* Video iframe täysleveäksi */
-    .video-container iframe {
-        width: 100vw;
+
+    .video-container, .photo-container {
+        max-width: 100%;
         height: auto;
     }
-    
-    /* Lista-asetukset: vaihda 1-sarakkeiseen asetteluun */
-    .left-column, .right-column ol {
-        columns: 1;
+
+    .text-column, .calculator-column {
+        max-width: 100%;
     }
-    
-    /* Instagram feed ja Facebook-postaukset täyteen leveyteen */
-    .instagram-feed,
-    .instagram-feed-tapahtumat,
-    .sk-ww-facebook-group-posts {
-        width: 100%;
-    }
-    .sk-ww-facebook-group-posts .post-content {
-        width: 100%;
+
+    .logo {
+        width: 380px;
     }
 }
-
-@media (max-width: 768px) {
-    /* Mobiili: aseta navbar pystysuoraan ja täysleveäksi */
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 10px; /* pienennä tarvittaessa */
-    }
-    
-    .navbar a {
-      margin: 5px 0;       /* pienemmät marginaalit */
-      width: 100%;         /* vie koko leveyden */
-      text-align: center;  /* keskitetty teksti */
-      font-size: 16px;     /* säädä fonttikokoa tarvittaessa */
-    }
-  }
