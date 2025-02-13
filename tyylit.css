@@ -84,60 +84,68 @@ body {
 }
 
 /* Facebook-widgetin yleiset tyylit */
-.sk-ww-facebook-group-posts {
-    background-color: #00000000;  /* Musta tausta */
-    display: flex;
-    color: #ffffff00;             /* Valkoinen teksti */
+/* Yleiset asetukset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Kontaineri */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 20px;
   }
-
-  .facebook-feed-user-root-container {
-    background-color: #0c0c0c00;
-    padding: 1px;            
+  
+  /* Tapahtumatiedot */
+  .home-section {
+    display:contents;
     
+    align-items: center;
+    background-color: rgba(4, 4, 4, 0.628);
+    border-radius: 8px;
+    padding: 16x;
+    margin-bottom: 20px;
   }
   
-  /* Postausalueen flex-asettelu: postaukset vierekkäin pienellä välilyönnillä */
-  .sk-ww-facebook-group-posts .post-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Pieni väli postauksien välillä */
-  }
-  
-  /* Yksittäiset postaukset neljään sarakkeeseen */
-  .sk-ww-facebook-group-posts .post-content > div {
-    background-color: #ffffff25;      /* Tummempi tausta yksittäiselle postaukselle */
-    padding: 15px;
-    border-radius: 5px;
-    flex: 1 1 calc(25% - 10px);   /* Neljän sarakkeen asettelu, huomioiden välin */
-    box-sizing: border-box;
-  }
-  
-  
-  .sk-ww-facebook-group-posts .widget-intro,
-  .sk-ww-facebook-group-posts .intro,
-  .sk-ww-facebook-group-posts p {
-    color: #060606 !important;
-    background-color: transparent !important;
-  }
-  body > main > div > div.sk-solution-holder > div.facebook-feed-user-root-container > div > div.sk-facebook-feed-profile-info.width-60 > div.sk_facebook_posts_feed_username_follow > span {
-    color: #f8f8f8d6; 
+  /* Facebook-widget ulkoasu */
+  .sk-ww-facebook-group-posts {
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    color: #fff;
   }
 
-  body > main > div > div.sk-solution-holder > div.facebook-feed-user-root-container > div > div.sk-facebook-feed-profile-info.width-60 {
-    width: 80%;           
-    max-width: 800px;     
-    height: 400px;        
-    padding: 20px;        
-    background-color: #f8f7f7;
-    margin: 20px auto;    /* Keskittää elementin vaakasuunnassa */
-    border-radius: 20px;  /* Pyöristetyt kulmat */
-    box-sizing: border-box; /* Sisältää paddingin elementin kokoon */
-}
+  .sk-solution-holder {
+    color: #fff;
+    background-color: rgba(4, 4, 4, 0.628);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Facebook-postaukset gridinä */
+  .sk-ww-facebook-group-posts .post-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  /* Responsiivisuus */
+  @media (max-width: 1024px) {
+    .sk-ww-facebook-group-posts .post-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sk-ww-facebook-group-posts .post-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 
     
