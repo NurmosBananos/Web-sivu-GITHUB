@@ -47,23 +47,58 @@ html, body {
 }
 
 /* ============================= */
-/* NAVIGAATIO */
+/* NAVIGAATIOPALKIN TYYLIT */
 /* ============================= */
 .navbar, .navbar_b {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
-    background-color: rgba(15, 15, 15, 0.176);
+    padding: 3px 6px; /* Vähennetään pystysuuntaista tilaa */
+    background-color: rgba(15, 15, 15, 0.8);
+    max-width: 1800px; /* Rajoitetaan leveyttä */
+    margin: 0 auto;
 }
 
+/* Linkkien muotoilu */
 .navbar a, .navbar_b a {
-    margin: 0 15px;
+    margin: 3px 10px; /* Vähennetään linkkien välistystä */
+    padding: 3px 5px; /* Pienempi padding */
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.3s;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Hover-efekti */
+.navbar a:hover, .navbar_b a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fdfdfd;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* MOBIILINÄKYMÄ */
+/* ============================= */
+@media (max-width: 768px) {
+    .navbar, .navbar_b {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar a, .navbar_b a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin: 3px 0;
+    }
+}
+
+
+
+
 
 /* ============================= */
 /* SISÄLLÖN PERUSASETUKSET */
