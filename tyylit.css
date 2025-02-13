@@ -78,6 +78,15 @@ html, body {
 }
 
 /* ============================= */
+/* LISTAN TYYLI – POISTA PALLOT */
+/* ============================= */
+ul {
+    list-style-type: none; /* Poistaa pallot */
+    padding-left: 0; /* Poistaa oletus-sisennyksen */
+    margin: 0;
+}
+
+/* ============================= */
 /* FLEX-KONTAKTORI */
 /* ============================= */
 .flexcontainer-index, .flexcontainer-jasenyydet {
@@ -146,14 +155,102 @@ html, body {
 }
 
 /* ============================= */
-/* TEKSTI & LASKURI (JÄSENYYDET) */
+/* LASKURI-OSION TYYLIT */
 /* ============================= */
+.calculator-column form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; /* Lisää pientä tilaa elementtien väliin */
+}
+
+.calculator-column label {
+    font-weight: bold;
+    white-space: nowrap; /* Estää tekstin hyppimisen */
+}
+
+.calculator-column input {
+    flex: 1;
+    min-width: 150px; /* Estää liian kapeat kentät */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Painikkeiden tasaus */
+.calculator-column .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Lisää väliä painikkeiden väliin */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Napit */
+.calculator-column button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    flex: 1; /* Asetetaan napit samankokoisiksi */
+}
+
+/* Hoverit pysyvät */
+.calculator-column button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* ============================= */
+/* MOBIILINÄKYMÄ */
+/* ============================= */
+@media (max-width: 768px) {
+    .calculator-column form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calculator-column input {
+        width: 90%; /* Skaalaa mobiilissa */
+    }
+
+    .calculator-column .button-container {
+        flex-direction: column;
+    }
+
+    .calculator-column button {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Yksittäiset laatikot */
 .text-column, .calculator-column {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8); /* Musta tausta */
     padding: 20px;
     border-radius: 10px;
+    min-width: 300px; /* Estää liian pienen koon */
 }
+
+/* Responsiivinen muotoilu mobiilille */
+@media (max-width: 768px) {
+    .text-container {
+        flex-direction: column; /* Muuttaa pystysuuntaiseksi */
+        align-items: center;
+    }
+
+    .text-column, .calculator-column {
+        width: 100%; /* Vie koko tilan mobiilissa */
+    }
+}
+
 
 /* ============================= */
 /* FOOTER */
@@ -193,9 +290,9 @@ footer {
     transform: scale(1.1);
 }
 
-/* ============================= */
-/* MOBIILINÄKYMÄN ASETUKSET */
-/* ============================= */
+/* ================================ */
+/* YLEISET MOBIILINÄKYMÄN ASETUKSET */
+/* ================================ */
 @media (max-width: 768px) {
     .container {
         width: 95%;
