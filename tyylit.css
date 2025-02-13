@@ -233,7 +233,7 @@ ul {
 /* Yksittäiset laatikot */
 .text-column, .calculator-column {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.8); /* Musta tausta */
+    background-color: rgba(0, 0, 0, 0.365); /* Musta tausta */
     padding: 20px;
     border-radius: 10px;
     min-width: 300px; /* Estää liian pienen koon */
